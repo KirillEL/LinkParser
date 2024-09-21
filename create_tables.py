@@ -1,4 +1,4 @@
-from .db_service import DBService
+from db_service import DBService
 
 
 def create_tables():

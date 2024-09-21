@@ -1,5 +1,5 @@
-from .db_service import DBService
-from .parser import LinkParser
+from create_tables import create_tables
+from parser import LinkParser
 
 
 class Program:
@@ -7,6 +7,7 @@ class Program:
         self.base_url = base_url
 
     def start(self):
+        create_tables()
         parser = LinkParser(
             base_url=self.base_url
         )
