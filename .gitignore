@@ -2,3 +2,4 @@
 crawler.db
 crawler.db-shm
 crawler.db-wal
+__pycache__/*

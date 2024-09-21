@@ -6,9 +6,10 @@ import re
 
 
 class LinkParser:
-    def __init__(self, base_url):
+    def __init__(self, base_url, max_depth=2):
         self.base_url = base_url
         self.visited = set()
+        self.max_depth = max_depth
 
     def get_links(self, url):
         try:
@@ -65,7 +66,9 @@ class LinkParser:
             link_count = db.fetchone()[0]
             print("Total URLs: {}, Total Links: {}".format(url_count, link_count))
 
-    def crawl(self, url):
+    def crawl(self, url, depth=0):
+        if depth >= self.max_depth:
+            return
         if url in self.visited:
             return
         self.visited.add(url)
@@ -98,4 +101,4 @@ class LinkParser:
                                    (word_id, link_id))
                     db.commit()
 
-                self.crawl(link)
+                return self.crawl(link, depth + 1)
