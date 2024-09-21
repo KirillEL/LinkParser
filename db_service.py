@@ -6,7 +6,8 @@ class DBService:
         self.file = file
 
     def __enter__(self):
-        self.conn = sql.connect(self.file)
+        self.conn = sql.connect(self.file, timeout=30)
+        self.conn.execute('PRAGMA journal_mode=WAL;')
         self.cursor = self.conn.cursor()
         return self
 
