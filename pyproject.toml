@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.11"
 beautifulsoup4 = "^4.12.3"
 requests = "^2.32.3"
+matplotlib = "^3.9.2"
+networkx = "^3.3"
 
 [tool.poetry.group.dev.dependencies]
 beautifulsoup4 = "^4.12.3"

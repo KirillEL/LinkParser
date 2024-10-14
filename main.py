@@ -12,10 +12,13 @@ class Program:
             base_url=self.base_url
         )
         parser.crawl(self.base_url)
+        parser.plot_results()
+        parser.plot_link_graph()
 
 
 if __name__ == '__main__':
-    base_url = input("Enter the URL: ")
+    #base_url = input("Enter the URL: ")
+    base_url = "https://ria.ru/"
     program = Program(
         base_url=base_url
     )

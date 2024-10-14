@@ -1,0 +1,15 @@
+count words: 1102 count links: 156
+count words: 1101 count links: 156
+count words: 3924 count links: 636
+count words: 3924 count links: 636
+count words: 3924 count links: 636
+count words: 237 count links: 68
+count words: 3399 count links: 557
+count words: 3399 count links: 557
+count words: 3399 count links: 557
+count words: 1962 count links: 729
+count words: 1962 count links: 729
+count words: 1962 count links: 729
+count words: 2104 count links: 317
+count words: 172 count links: 52
+count words: 172 count links: 52

@@ -6,7 +6,7 @@ def create_tables():
         db.execute('''
                     CREATE TABLE IF NOT EXISTS wordList (
                         rowId INTEGER PRIMARY KEY AUTOINCREMENT,
-                        word TEXT NOT NULL,
+                        word TEXT UNIQUE NOT NULL,
                         isFiltered INTEGER
                     )
                 ''')
@@ -14,7 +14,7 @@ def create_tables():
         db.execute('''
                     CREATE TABLE IF NOT EXISTS URLList (
                         rowId INTEGER PRIMARY KEY AUTOINCREMENT,
-                        URL TEXT NOT NULL
+                        URL TEXT UNIQUE NOT NULL
                     )
                 ''')
 
